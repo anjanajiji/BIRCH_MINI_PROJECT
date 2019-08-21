@@ -1,0 +1,8 @@
+import numpy as np
+from matplotlib import pyplot as plt
+import seaborn as sns
+sns.set()
+from sklearn.datasets.samples_generator import make_blobs
+from sklearn.cluster import birch
+X, clusters = make_blobs(n_samples=450, centers=6, cluster_std=0.70, random_state=0)  #generate sample data sets
+plt.scatter(X[:,0], X[:,1], alpha=0.9, edgecolors='g')                                #make plot
